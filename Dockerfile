@@ -31,8 +31,8 @@ RUN chmod 755 /usr/bin/custom-docker-entrypoint.sh
 #####
 ## ADD default USER
 #####
-RUN addgroup -g 1010 app && \
-    adduser -D -G app -g app -s /bin/ash app -h /docs
+RUN addgroup -g 1003 app && \
+    adduser -D -G app -g app --uid 1003 -s /bin/ash app -h /docs
 
 #####
 ## Default packages
